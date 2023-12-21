@@ -1,13 +1,22 @@
+:root {
+    --font-size: 1rem;
+    --scroll: 2rem;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #fff;
-    scroll-padding: 5rem;
+    scroll-padding: var(--scroll);
 }
 
-:root {
-    --font-size: 1rem;
+
+
+::selection{
+    background-color: goldenrod;
+    color: white;
 }
 
 body {
@@ -53,7 +62,7 @@ body {
 header,
 .header-background,
 header::after {
-    height: 5vh;    
+    height: 4rem;    
 }
 
 header::after {
@@ -149,7 +158,7 @@ nav ul li:last-child {
 .main-search h1 {
     color: gold;
     font-weight: lighter;
-    font-size: 2vh;
+    font-size: 1rem;
     margin: 1.5rem 0 0 1rem;
 }
 
@@ -160,14 +169,14 @@ nav ul li:last-child {
     padding: 1vh;
     margin: 1rem 0;
     display: flex;
-    border: 4px solid white;
+    border: 2px solid white;
     flex-direction: row;
     justify-content: space-evenly;
     font-size: 2vh;
 }
 .search-bar i {
     margin: 0 1rem;   
-    font-size: 2vh;
+    font-size: 1rem;
 }
 
 
@@ -187,12 +196,12 @@ nav ul li:last-child {
     background: transparent;
     padding: 1rem 1rem 1rem 0;
     width: 90%;
-    font-size: 2vh;
+    font-size: 1rem;
 }
 
 .search-bar input::placeholder {
     color: #c9b01e;
-    font-size: 2vh;
+    font-size: 1rem;
 }
 
 .search-result-section, .all-books{
@@ -212,16 +221,16 @@ nav ul li:last-child {
 
 
 .book-result, .book {
-    height: 30vh;
+    height: 20rem;
     text-align: center;
     width: fit-content;
     scroll-padding: 20rem;
 }
 
 .book-result img, .book img{
-    height: 80%;
-    width: 15vw;
-    
+    height: min(20rem, 80%);
+    width: 10rem;
+    margin: 1rem 0;
 }
 
 .book-result p , .book p{
@@ -233,9 +242,7 @@ nav ul li:last-child {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    font-size: 2vh;
     width: 15vw;
-    
 }
 
 
@@ -250,41 +257,41 @@ nav ul li:last-child {
 
 
 .popup-content p{
-    font-size: 1.5vh;
+    font-size: 0.9rem;
     text-align: justify;
 }
 .popup-content h1{
-    font-size: 3vh;
+    font-size: 2rem;
 }
 .popup-content h3{
-    font-size: 2.5vh;
+    font-size: 1.5rem;
 }
 .popup-content h4{
-    font-size: 2vh;
+    font-size: 1.5rem;
 }
 
 .genre-btn{
-    padding: 0.5vh 1vh;
+    padding: 0.5rem 1rem;
     margin: 1vh 0.5vh;
     background: black;
     color: white;
-    border-radius: 2vh;
+    border-radius: 2rem;
     border: none;
     outline:  none;
-    font-size: 2vh;
+    font-size: 1.1rem;
 }
 
 .close-btn{
-    padding: 0.5vh 1vh;
+    padding: 0.5rem 1rem;
     margin: 1.5vh 0.5vh;
     margin-bottom: 0;
     border: none;
     outline:  none;
     color: black;
     background: gold;
-    border-radius: 2vh;
+    border-radius: 2rem;
     font-weight: bolder;
-    font-size: 2vh;
+    font-size: 1.1rem;
 }
 
 .popup-content{   
@@ -302,21 +309,19 @@ nav ul li:last-child {
 
 .popup-info{    
     position: absolute;   
-    right: 10%;   
-    left: 10%;
+    right: 0;   
+    left: 0;
     z-index: 5;/* 1 */    
-    width: 40%;
-    height: 60vh;
+    width: 30%;
+    height: 90vh;
     box-shadow: 0 0 2vh 2vh goldenrod;
     border-radius: 2vh;
-    
-    transform: translate(50%, -20%);
-    
+    transform: translate(120%, -50%);
 }
 
 .synopsis-section{
     width: 100%;        
-    overflow: scroll;
+    overflow: auto;
 }        
 
 /* Book Addition (Form) */
@@ -334,9 +339,9 @@ nav ul li:last-child {
     border: none;
     width: 90%;
     height: fit-content;
-    font-size: 2vh;
+    font-size: 1.5rem;
     border-bottom: 2px solid gold;
-    margin: 1vh 0;
+    margin: 1rem 0;
 }
 
 .update .book-add::placeholder{
@@ -347,17 +352,18 @@ nav ul li:last-child {
 
 .update .syno{
     height: 20vh;
-    font-size: 2vh;
+    font-size: 1.5rem;
     margin: 2vh 0;
+    font-weight: bold;
 }
 
 .update h1{
-    font-size: 3vh;
+    font-size: 2.5rem;
 } 
 
 .form-box{
     width: 90%;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -369,8 +375,13 @@ nav ul li:last-child {
 .update{
     position: relative;
     background: #131319;
-    height: 50vh;
-    width: 100%;
+    height: 70vh;
+    width: 70%;
+}
+
+.update textarea{
+    height: max-content;
+    margin: 1rem 0;
 }
 
 .update::after{
@@ -388,7 +399,9 @@ nav ul li:last-child {
 
 
 .add-btn{
-    font-size: 2vh;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
 }
 
 
@@ -420,14 +433,16 @@ footer {
 }
 
 .footer-col {
-    flex-basis: 25%;
+    flex-basis: 15%;
     padding: 0.5rem;
-    line-height: 2vh;
+    line-height: 2rem;
 }
 
 .text {
     margin-left: 1vh;
     width: 80%;
+    text-align: center;
+    line-height: normal;
 }
 
 footer h3,
@@ -486,7 +501,7 @@ form textarea {
     border-radius: 10px;
     font-size: var(--font-size);
     width: 90%;
-    height: 6vh;
+    height: max-content;
     font-family: inherit;
 }
 
@@ -518,19 +533,52 @@ form button {
     align-items: center;
     width: 90%;
     margin: 1vh;
-    height: 2vh;
+    height: max-content;
 }
 
-.media a i,
-.copyright {
+.media a i{
     color: gold;
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
 }
 
 .copyright {
     text-align: center;
+    margin: 1rem;
 }
 
-@media screen and (max-width: 576px) {
+
+
+
+
+@media screen and (max-width: 768px) {    
+    :root{
+        --scroll: 5rem;
+    }
+    .search-result-section, .all-books{
+        grid-template-columns: repeat(3, 1fr);        
+    }
+    
+    .book-result img, .book img{
+        height: min(13rem, 85%);
+        width: 8rem;
+    }
+    .book-result p , .book p{
+        width: 100%;
+    }
+
+    .popup-info{
+        height: 65vh;
+        width: 40%;
+        transform: translate(70%, -50%);
+    }
+   }
+
+
+
+
+
+@media screen and (max-width: 576px) {    
     header {
         flex-direction: column;
     }
@@ -583,6 +631,7 @@ form button {
 
     .media a i {
         font-size: 1.5rem;
+        margin: 0.5rem;
     }
 
 
@@ -614,17 +663,17 @@ form button {
         column-gap: 2rem;        
         grid-row-gap: 3rem;
     }
+   
     
-    .all-books{        
+    .all-books, .search-result-section{
         height: auto;
         width: 100%;        
-        margin: auto;
         margin-top: 5rem;
+        column-gap: 15%;
+        padding: 1rem;
     }
     
-    .search-result-section{
-        margin: 2rem auto;
-    }
+
     
    
 
@@ -688,17 +737,16 @@ form button {
 
     .popup-info {
         width: 80%;
-        height: 25rem;
+        height: 27rem;
         box-shadow: 0 0 2px 2px goldenrod;
         border-radius: 20px;
-        transform: scale(0.1);
+        transform: scale(0.1) ;
         opacity: 0;
-    
     }
 
     .pop-open {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translate(13%, -50%);
     }
 
     
@@ -732,7 +780,7 @@ form button {
     
     .update{
         height: 30rem;
-   
+        width: 90%;
     }
     
 }

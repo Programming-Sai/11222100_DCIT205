@@ -19,32 +19,20 @@
         <nav class="navbar">
             
             <ul>
-                <li><a href="Search_Books_Page">Search</a></li>
                 <li><a href="index"><span class="nowrap">All Books</span></a></li>
+                <li><a href="Search_Books_Page">Search</a></li>
                 <li><a href="Add_Books_Page"><span class="nowrap">Add Books</span></a></li>
             </ul>
         </nav>
     </header>
     
     
-    <main class="main-search">
-        <div class="search-section">
-             
-                <div class="logo">
-                   <i class="fa-solid fa-book" style="color: #FFD700;"></i>Golden<span class="style">Books</span>
-                </div>            
-                <form class="search-bar">
-                    <i class="fa-solid fa-magnifying-glass" style="color: #c9b01e;"></i>
-                    <input type="text" class="search-input" placeholder="Search Title, Author or Genre" onkeydown="if (event.key === 'Enter') { event.preventDefault(); goldenBooks.searchBook(); }">
-                </form>
-          
-        </div>
-        
-        
-        <h1 class="result-info"></h1>
-
-        <div class="search-result-section"></div>
-        <div class="js-popup"></div>
+    
+    
+    
+    <main class="books-pane">
+        <div class="all-books js-all-books"></div>
+        <div class="js-popup"></div>        
     </main>
     
     

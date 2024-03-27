@@ -250,7 +250,7 @@ function BookOperations() {
             for (let bookItem of searchResult) {
                
                 bookContent += `<div class="book-result">
-                                    <a href="View_Books_Page.html#${this.bookList.indexOf(bookItem)}" target="_blank"> 
+                                    <a href="index#${this.bookList.indexOf(bookItem)}" target="_blank"> 
                                         <img src="Images/${(defaultBooks.indexOf(bookItem) !== -1) ? (defaultBooks.indexOf(bookItem) + 1)+'.jpeg' : this.defaultImg(bookItem.imgIdxDefault)[0]}" alt="" width="145" height="180">
                                         <p>${bookItem.title}</p>
                                     </a>
